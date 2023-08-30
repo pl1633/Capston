@@ -112,7 +112,7 @@ imbalanced한 데이터가 존재한다.
 <tr><td colspan="1" rowspan="3" valign="top"><p></p><p>Deeplab</p></td><td colspan="1" valign="top">resnet101</td><td colspan="1" valign="top">86.19</td></tr>
 <tr><td colspan="1" valign="top">resnet50</td><td colspan="1" valign="top">86.01</td></tr>
 <tr><td colspan="1" valign="top">mobilenet_v3</td><td colspan="1" valign="top">83.82</td></tr>
-<tr><td colspan="1" rowspan="3" valign="top"><p></p><p>Unet</p></td><td colspan="1" valign="top">resnet101</td><td colspan="1" valign="top">85.69/td></tr>
+<tr><td colspan="1" rowspan="3" valign="top"><p></p><p>Unet</p></td><td colspan="1" valign="top">resnet101</td><td colspan="1" valign="top">85.69</td></tr>
 <tr><td colspan="1" valign="top">resnet50</td><td colspan="1" valign="top">85.23</td></tr>
 <tr><td colspan="1" valign="top">mobilenet_v3</td><td colspan="1" valign="top">83.88</td></tr>
 <tr><td colspan="1" rowspan="2" valign="top">FCN</td><td colspan="1" valign="top">resnet101</td><td colspan="1" valign="top">84.51</td></tr>
