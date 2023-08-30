@@ -4,11 +4,9 @@
 
 **및 병변 심각도 측정**
 
-**김성훈, 박소연, 홍석표**
-
 **1. 배경 및 필요성**
 **
-` `백반증은 피부의 멜라닌 색소가 소실되어 피부의 여러 형태의 흰색 반점이 생기는 난치성 피부질환이다. 백반증은 난치성 피부질환 중에는 흔하게 나타나는데 전체 인구 중 0.5~2% 정도에게 나타나며 인종 지역과 차이 없이 발생한다. 백반증은 통증도 없고 전염성도 없는, 걸리게 되더라도 건강에는 문제가 없는 피부질환이다. 하지만 밖으로 노출되는 부위에 백반증이 생긴다면 하얀 반점이 흉하게 느껴져 사람을 대할 때 위축감을 느끼는 등 정상적인 사회활동이 어려워질 수 있다.[1] 따라서, 백반증의 진행정도가 외부에 티가 나게 되는 정도가 되면 피부과를 방문하게 되는데, 진행이 많이 된 경우 치료하기가 어렵고 초기에 치료를 해야 병의 진행을 막고 호전시키기 쉽다.[2] 그러므로 백반증을 판별하기 위한 백반증 환부 영역검출이 중요하다. 일반적으로는 육안으로 백반증을 판별하거나 피부과에서 우드등(Wood's lamp)을 통해 발병 부위를 확인하지만 병 초기에는 피부과를 방문할 정도로 심각하게 여기지 않을 가능성이 크고 육안으로는 진행도 판단의 기준이 명확하지 않을 가능성이 있다.[3] 따라서 이에 도움을 주고자, 딥러닝을 통한 백반증 영역 검출방법을 제안해보고자 한다.
+백반증은 피부의 멜라닌 색소가 소실되어 피부의 여러 형태의 흰색 반점이 생기는 난치성 피부질환이다. 백반증은 난치성 피부질환 중에는 흔하게 나타나는데 전체 인구 중 0.5~2% 정도에게 나타나며 인종 지역과 차이 없이 발생한다. 백반증은 통증도 없고 전염성도 없는, 걸리게 되더라도 건강에는 문제가 없는 피부질환이다. 하지만 밖으로 노출되는 부위에 백반증이 생긴다면 하얀 반점이 흉하게 느껴져 사람을 대할 때 위축감을 느끼는 등 정상적인 사회활동이 어려워질 수 있다.[1] 따라서, 백반증의 진행정도가 외부에 티가 나게 되는 정도가 되면 피부과를 방문하게 되는데, 진행이 많이 된 경우 치료하기가 어렵고 초기에 치료를 해야 병의 진행을 막고 호전시키기 쉽다.[2] 그러므로 백반증을 판별하기 위한 백반증 환부 영역검출이 중요하다. 일반적으로는 육안으로 백반증을 판별하거나 피부과에서 우드등(Wood's lamp)을 통해 발병 부위를 확인하지만 병 초기에는 피부과를 방문할 정도로 심각하게 여기지 않을 가능성이 크고 육안으로는 진행도 판단의 기준이 명확하지 않을 가능성이 있다.[3] 따라서 이에 도움을 주고자, 딥러닝을 통한 백반증 영역 검출방법을 제안해보고자 한다.
 
 백반증 환부의 영역검출을 위해 다양한 방법으로 연구한 논문이 다수 있다. 하지만 이러한 논문들은 영역 검출까지만 진행되었고 그 이상까지 진행되지는 않았다. 본 연구에서는 딥러닝을 통해 백반증 발병 부위를 검출한 후, 발병부위와 비발병부위의 색상 차이를 계산하여 백반증 병변 진행도까지 확인하고자 한다.
 
@@ -43,6 +41,7 @@ Classification (분류)는 인풋에 대해서 하나의 물체를 구분하는 
 학습을 할 때, 설정해 놓은 데이터 전처리 방법을 사용하여 데이터를 가져오게 된다. 
 
 ![Aspose Words 5f38b4e8-c2ea-40c8-bd67-015bd60460f0 001](https://github.com/pl1633/Capston/assets/79955669/0c342312-ba9a-4157-a7ea-528e3da69524)
+![Aspose Words 5f38b4e8-c2ea-40c8-bd67-015bd60460f0 002](https://github.com/pl1633/Capston/assets/79955669/d157c457-f2ca-4c54-93da-f4b611cdcfd0)
 
 **Fig1.  Vitiligo Dataset**
 
@@ -50,7 +49,7 @@ Classification (분류)는 인풋에 대해서 하나의 물체를 구분하는 
 
 전이학습 이란, 임의의 영역에서 학습된 신경망 네트워크의 일부를 다른 영역에 적용하여 모델을 학습하는 방법이다.[7] 높은 정확도를 비교적 짧은 시간 내에 만들어 낼 수 있기 때문에, 딥러닝에서 유망한 방법론 중 하나이다. 즉, 사전학습 된 모델을 이용하는 것을 뜻한다. 
 
-![Aspose Words 5f38b4e8-c2ea-40c8-bd67-015bd60460f0 002](https://github.com/pl1633/Capston/assets/79955669/d157c457-f2ca-4c54-93da-f4b611cdcfd0)
+![Aspose Words 5f38b4e8-c2ea-40c8-bd67-015bd60460f0 003](https://github.com/pl1633/Capston/assets/79955669/e44da741-508e-4688-a74f-4e1110209cc1)
 
 **Fig2. Transfer learning**
 
@@ -70,7 +69,7 @@ FCN(Fully Convolutional Network) 기반 모델은 fully connected 층을 제거�
 
 FCN과 Deeplab의 구조는 합성곱 층을 통해 얻은 특징점 지도를 원본 이미지 크기와 같게 만들기 위해서 단순하게 up-sampling 하는 구조를 사용한다. 
 
-![Aspose Words 5f38b4e8-c2ea-40c8-bd67-015bd60460f0 003](https://github.com/pl1633/Capston/assets/79955669/e44da741-508e-4688-a74f-4e1110209cc1)
+
 
 **Fig3.** **Network structure for classification and feature point extraction network structure of FCN [7]**
 
@@ -78,15 +77,17 @@ FCN과 Deeplab의 구조는 합성곱 층을 통해 얻은 특징점 지도를 �
 
 **Fig4.  FCN Architecture**
 
+![Aspose Words 5f38b4e8-c2ea-40c8-bd67-015bd60460f0 005](https://github.com/pl1633/Capston/assets/79955669/c5996dfd-8bfe-44b5-b8af-51fa7f40f75c)
+
 ` `본 연구에서는 FCN기반 모델, Deeplab기반 모델 몇개를 비교해서 높은 결과값을 보여주는 모델을 채택 예정이다. 
 
 **3-4. 성능 평가**
 
-![Aspose Words 5f38b4e8-c2ea-40c8-bd67-015bd60460f0 005](https://github.com/pl1633/Capston/assets/79955669/c5996dfd-8bfe-44b5-b8af-51fa7f40f75c)
-
 ![Aspose Words 5f38b4e8-c2ea-40c8-bd67-015bd60460f0 006](https://github.com/pl1633/Capston/assets/79955669/651faa3d-90ea-475d-b922-336ec91186a4)
 
 ![Aspose Words 5f38b4e8-c2ea-40c8-bd67-015bd60460f0 007](https://github.com/pl1633/Capston/assets/79955669/512420cf-bb8c-4863-9108-3ec4030155a6)
+
+![Aspose Words 5f38b4e8-c2ea-40c8-bd67-015bd60460f0 008](https://github.com/pl1633/Capston/assets/79955669/4b1fc68d-551f-459f-acc1-5d27b2bdd91b)
 
 Acurracy는 데이터 분포에 민감하다. 따라서 imbalanced한 데이터에 사용하기에는 적합하지 않다.
 
@@ -96,14 +97,11 @@ Acurracy는 데이터 분포에 민감하다. 따라서 imbalanced한 데이터�
 
 imbalanced한 데이터가 존재한다. 
 
-![Aspose Words 5f38b4e8-c2ea-40c8-bd67-015bd60460f0 008](https://github.com/pl1633/Capston/assets/79955669/4b1fc68d-551f-459f-acc1-5d27b2bdd91b)
-
 **Fig5. Dataset**
 
+![Aspose Words 5f38b4e8-c2ea-40c8-bd67-015bd60460f0 009](https://github.com/pl1633/Capston/assets/79955669/5f5e3fb5-28b2-4bd8-8714-96b671b55855)
+
 위의 이미지는 전체 픽셀 수 65536(256 x 256) 개 중 0 라벨이 62192개, 255 라벨이 3344개로 백반증 환부가 아닌 영역이 약 95%로 데이터의 라벨이 치우쳐 있다. 따라서, 본 모델의 성능평가를 위해 f1-score를 사용하기로 결정하였다. 
-
-
-
 
 
 
@@ -111,21 +109,21 @@ imbalanced한 데이터가 존재한다.
 
 
 <table><tr><th colspan="1" valign="top"><b>기반 모델</b></th><th colspan="1" valign="top"><b>수축단</b></th><th colspan="1" valign="top"><b>F1-score</b></th></tr>
-<tr><td colspan="1" rowspan="3" valign="top"><p></p><p>Deeplab</p></td><td colspan="1" valign="top">resnet101</td><td colspan="1" valign="top">86\.19</td></tr>
-<tr><td colspan="1" valign="top">resnet50</td><td colspan="1" valign="top">86\.01</td></tr>
-<tr><td colspan="1" valign="top">mobilenet_v3</td><td colspan="1" valign="top">83\.82</td></tr>
-<tr><td colspan="1" rowspan="3" valign="top"><p></p><p>Unet</p></td><td colspan="1" valign="top">resnet101</td><td colspan="1" valign="top">85\.694</td></tr>
-<tr><td colspan="1" valign="top">resnet50</td><td colspan="1" valign="top">85\.23</td></tr>
-<tr><td colspan="1" valign="top">mobilenet_v3</td><td colspan="1" valign="top">83\.88</td></tr>
-<tr><td colspan="1" rowspan="2" valign="top">FCN</td><td colspan="1" valign="top">resnet101</td><td colspan="1" valign="top">84\.51</td></tr>
-<tr><td colspan="1" valign="top">resnet50</td><td colspan="1" valign="top">84\.79</td></tr>
+<tr><td colspan="1" rowspan="3" valign="top"><p></p><p>Deeplab</p></td><td colspan="1" valign="top">resnet101</td><td colspan="1" valign="top">86.19</td></tr>
+<tr><td colspan="1" valign="top">resnet50</td><td colspan="1" valign="top">86.01</td></tr>
+<tr><td colspan="1" valign="top">mobilenet_v3</td><td colspan="1" valign="top">83.82</td></tr>
+<tr><td colspan="1" rowspan="3" valign="top"><p></p><p>Unet</p></td><td colspan="1" valign="top">resnet101</td><td colspan="1" valign="top">85.69/td></tr>
+<tr><td colspan="1" valign="top">resnet50</td><td colspan="1" valign="top">85.23</td></tr>
+<tr><td colspan="1" valign="top">mobilenet_v3</td><td colspan="1" valign="top">83.88</td></tr>
+<tr><td colspan="1" rowspan="2" valign="top">FCN</td><td colspan="1" valign="top">resnet101</td><td colspan="1" valign="top">84.51</td></tr>
+<tr><td colspan="1" valign="top">resnet50</td><td colspan="1" valign="top">84.79</td></tr>
 </table>
 
 각 모델마다 20epoch만큼 학습하였으며,
 
 Deeplabv3\_resnet101의 F1-score가 가장 높게 나온 관계로 이 모델로 학습을 진행하였다. 
 
-![Aspose Words 5f38b4e8-c2ea-40c8-bd67-015bd60460f0 009](https://github.com/pl1633/Capston/assets/79955669/5f5e3fb5-28b2-4bd8-8714-96b671b55855)
+
 
 **Fig6. Deeplabv3\_resnet101 학습 결과**
 
@@ -133,14 +131,14 @@ Deeplabv3\_resnet101의 F1-score가 가장 높게 나온 관계로 이 모델로
 
 **Fig7. 원본이미지, Ground truth, Prediction**
 
-` `(Fig6) 원본이미지, Ground truth, prediction을 비교한 결과, 일정수준이상 비슷한 영역검출 결과를 보이는 것으로 확인되었다. 
+![last2](https://github.com/pl1633/Capston/assets/79955669/5476f38e-727f-421f-ba1d-3bf697c5c85c)
+
+(Fig6) 원본이미지, Ground truth, prediction을 비교한 결과, 일정수준이상 비슷한 영역검출 결과를 보이는 것으로 확인되었다. 
 
 백반증 병변진행도 확인을 위해, 학습된 모델을 통해 원본 이미지를 병변이미지와 비병변 이미지로 나누어서 두 이미지의 RGB값의 평균을 측정하였다. 임의로 백반증의 진행정도를 상, 중, 하 로 분류하여 각각의 이미지를 선정하였다.  
 
-|![Aspose Words 5f38b4e8-c2ea-40c8-bd67-015bd60460f0 011](https://github.com/pl1633/Capston/assets/79955669/56fae83e-f24b-4719-91a9-4dbabe874728)|
-| - |
-|![Aspose Words 5f38b4e8-c2ea-40c8-bd67-015bd60460f0 012](https://github.com/pl1633/Capston/assets/79955669/ec229c90-519a-446e-8ca4-cd5f9fa933f7)|
-|![Aspose Words 5f38b4e8-c2ea-40c8-bd67-015bd60460f0 013](https://github.com/pl1633/Capston/assets/79955669/b5b8fc58-4121-4324-8876-bd8f77946080)|
+
+![last](https://github.com/pl1633/Capston/assets/79955669/cebdd74b-f584-454c-9d76-c7ab3b7c57cb)
 
 **Fig8. 백반증 진행도에 따른 각각의 원본이미지,**
 
