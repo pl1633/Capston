@@ -42,7 +42,7 @@ Classification (분류)는 인풋에 대해서 하나의 물체를 구분하는 
 
 학습을 할 때, 설정해 놓은 데이터 전처리 방법을 사용하여 데이터를 가져오게 된다. 
 
-![](Aspose.Words.5f38b4e8-c2ea-40c8-bd67-015bd60460f0.001.jpeg)![](Aspose.Words.5f38b4e8-c2ea-40c8-bd67-015bd60460f0.002.png)
+![Aspose Words 5f38b4e8-c2ea-40c8-bd67-015bd60460f0 001](https://github.com/pl1633/Capston/assets/79955669/0c342312-ba9a-4157-a7ea-528e3da69524)
 
 **Fig1.  Vitiligo Dataset**
 
@@ -50,7 +50,7 @@ Classification (분류)는 인풋에 대해서 하나의 물체를 구분하는 
 
 전이학습 이란, 임의의 영역에서 학습된 신경망 네트워크의 일부를 다른 영역에 적용하여 모델을 학습하는 방법이다.[7] 높은 정확도를 비교적 짧은 시간 내에 만들어 낼 수 있기 때문에, 딥러닝에서 유망한 방법론 중 하나이다. 즉, 사전학습 된 모델을 이용하는 것을 뜻한다. 
 
-![](Aspose.Words.5f38b4e8-c2ea-40c8-bd67-015bd60460f0.003.jpeg)
+![Aspose Words 5f38b4e8-c2ea-40c8-bd67-015bd60460f0 002](https://github.com/pl1633/Capston/assets/79955669/d157c457-f2ca-4c54-93da-f4b611cdcfd0)
 
 **Fig2. Transfer learning**
 
@@ -70,11 +70,11 @@ FCN(Fully Convolutional Network) 기반 모델은 fully connected 층을 제거�
 
 FCN과 Deeplab의 구조는 합성곱 층을 통해 얻은 특징점 지도를 원본 이미지 크기와 같게 만들기 위해서 단순하게 up-sampling 하는 구조를 사용한다. 
 
-![](Aspose.Words.5f38b4e8-c2ea-40c8-bd67-015bd60460f0.004.png)
+![Aspose Words 5f38b4e8-c2ea-40c8-bd67-015bd60460f0 003](https://github.com/pl1633/Capston/assets/79955669/e44da741-508e-4688-a74f-4e1110209cc1)
 
 **Fig3.** **Network structure for classification and feature point extraction network structure of FCN [7]**
 
-![](Aspose.Words.5f38b4e8-c2ea-40c8-bd67-015bd60460f0.005.jpeg)
+![Aspose Words 5f38b4e8-c2ea-40c8-bd67-015bd60460f0 004](https://github.com/pl1633/Capston/assets/79955669/6dfa2f04-796f-4b85-8fd1-0233c4d4b504)
 
 **Fig4.  FCN Architecture**
 
@@ -82,11 +82,11 @@ FCN과 Deeplab의 구조는 합성곱 층을 통해 얻은 특징점 지도를 �
 
 **3-4. 성능 평가**
 
-![](Aspose.Words.5f38b4e8-c2ea-40c8-bd67-015bd60460f0.006.png)
+![Aspose Words 5f38b4e8-c2ea-40c8-bd67-015bd60460f0 005](https://github.com/pl1633/Capston/assets/79955669/c5996dfd-8bfe-44b5-b8af-51fa7f40f75c)
 
-![](Aspose.Words.5f38b4e8-c2ea-40c8-bd67-015bd60460f0.007.png)
+![Aspose Words 5f38b4e8-c2ea-40c8-bd67-015bd60460f0 006](https://github.com/pl1633/Capston/assets/79955669/651faa3d-90ea-475d-b922-336ec91186a4)
 
-![](Aspose.Words.5f38b4e8-c2ea-40c8-bd67-015bd60460f0.008.png)
+![Aspose Words 5f38b4e8-c2ea-40c8-bd67-015bd60460f0 007](https://github.com/pl1633/Capston/assets/79955669/512420cf-bb8c-4863-9108-3ec4030155a6)
 
 Acurracy는 데이터 분포에 민감하다. 따라서 imbalanced한 데이터에 사용하기에는 적합하지 않다.
 
@@ -96,7 +96,7 @@ Acurracy는 데이터 분포에 민감하다. 따라서 imbalanced한 데이터�
 
 imbalanced한 데이터가 존재한다. 
 
-![](Aspose.Words.5f38b4e8-c2ea-40c8-bd67-015bd60460f0.009.png)
+![Aspose Words 5f38b4e8-c2ea-40c8-bd67-015bd60460f0 008](https://github.com/pl1633/Capston/assets/79955669/4b1fc68d-551f-459f-acc1-5d27b2bdd91b)
 
 **Fig5. Dataset**
 
@@ -125,11 +125,11 @@ imbalanced한 데이터가 존재한다.
 
 Deeplabv3\_resnet101의 F1-score가 가장 높게 나온 관계로 이 모델로 학습을 진행하였다. 
 
-![](Aspose.Words.5f38b4e8-c2ea-40c8-bd67-015bd60460f0.010.jpeg)
+![Aspose Words 5f38b4e8-c2ea-40c8-bd67-015bd60460f0 009](https://github.com/pl1633/Capston/assets/79955669/5f5e3fb5-28b2-4bd8-8714-96b671b55855)
 
 **Fig6. Deeplabv3\_resnet101 학습 결과**
 
-![](Aspose.Words.5f38b4e8-c2ea-40c8-bd67-015bd60460f0.011.png)
+![Aspose Words 5f38b4e8-c2ea-40c8-bd67-015bd60460f0 010](https://github.com/pl1633/Capston/assets/79955669/75903a02-8227-4b3c-a779-5569552017c7)
 
 **Fig7. 원본이미지, Ground truth, Prediction**
 
@@ -137,10 +137,10 @@ Deeplabv3\_resnet101의 F1-score가 가장 높게 나온 관계로 이 모델로
 
 백반증 병변진행도 확인을 위해, 학습된 모델을 통해 원본 이미지를 병변이미지와 비병변 이미지로 나누어서 두 이미지의 RGB값의 평균을 측정하였다. 임의로 백반증의 진행정도를 상, 중, 하 로 분류하여 각각의 이미지를 선정하였다.  
 
-|![](Aspose.Words.5f38b4e8-c2ea-40c8-bd67-015bd60460f0.012.jpeg)![](Aspose.Words.5f38b4e8-c2ea-40c8-bd67-015bd60460f0.013.png)![](Aspose.Words.5f38b4e8-c2ea-40c8-bd67-015bd60460f0.014.png)|
+|![Aspose Words 5f38b4e8-c2ea-40c8-bd67-015bd60460f0 011](https://github.com/pl1633/Capston/assets/79955669/56fae83e-f24b-4719-91a9-4dbabe874728)|
 | - |
-|![](Aspose.Words.5f38b4e8-c2ea-40c8-bd67-015bd60460f0.015.jpeg)![](Aspose.Words.5f38b4e8-c2ea-40c8-bd67-015bd60460f0.016.png)![](Aspose.Words.5f38b4e8-c2ea-40c8-bd67-015bd60460f0.017.jpeg)|
-|![](Aspose.Words.5f38b4e8-c2ea-40c8-bd67-015bd60460f0.018.jpeg)![](Aspose.Words.5f38b4e8-c2ea-40c8-bd67-015bd60460f0.019.png)![](Aspose.Words.5f38b4e8-c2ea-40c8-bd67-015bd60460f0.020.jpeg)|
+|![Aspose Words 5f38b4e8-c2ea-40c8-bd67-015bd60460f0 012](https://github.com/pl1633/Capston/assets/79955669/ec229c90-519a-446e-8ca4-cd5f9fa933f7)|
+|![Aspose Words 5f38b4e8-c2ea-40c8-bd67-015bd60460f0 013](https://github.com/pl1633/Capston/assets/79955669/b5b8fc58-4121-4324-8876-bd8f77946080)|
 
 **Fig8. 백반증 진행도에 따른 각각의 원본이미지,**
 
